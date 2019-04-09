@@ -19,4 +19,6 @@ Install
   * Do the following test:     
      cd to the work path     
     `$ python pdfConverter.py` 
-
+    
+  ![alt text](https://github.com/A2Zntu/HW2_Text_Mining/blob/master/picture/Pdf2txtSample.JPG "Logo Title Text 1")
+   
