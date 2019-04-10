@@ -69,7 +69,7 @@ def TxtNamePrecise(name):
         
 if __name__ == '__main__':  
     '''Sample with 景順台灣科技基金-基金公開說明書.pdf'''
-    content = readPDF(os.path.join(pdf_dir, '景順台灣科技基金-基金公開說明書.pdf'))     
+    content = readPDF(os.path.join(pdf_dir, '景順潛力基金-基金公開說明書.pdf'))     
     name = TxtNamePrecise(content[0]) # The documnet Name
     pathContent = os.path.join(txt_dir, name)
     saveTxt(content, txtFile = pathContent)
