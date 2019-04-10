@@ -14,7 +14,7 @@ import os
 
 
 work_dir = os.getcwd()
-pdf_dir = os.path.join(work_dir, 'prospectus')
+pdf_dir = os.path.join(work_dir, 'pdfraw')
 txt_dir = os.path.join(work_dir, 'txtDir')
 
 def readPDF(fname, pages=None):
@@ -66,11 +66,23 @@ def TxtNamePrecise(name):
     
     newName += '.txt'
     return newName
-        
-if __name__ == '__main__':  
-    '''Sample with 景順台灣科技基金-基金公開說明書.pdf'''
-    content = readPDF(os.path.join(pdf_dir, '景順潛力基金-基金公開說明書.pdf'))     
-    name = TxtNamePrecise(content[0]) # The documnet Name
+
+
+
+
+f = open("C:\\Users\\Stella\\Documents\\GitHub\\HW2_Text_Mining\\fund_list3.csv", encoding="utf-8" )
+fundlist =[]
+for line in f:
+      fundlist.append(line.strip('\n'))
+print(fundlist)
+m =0
+for i in fundlist:
+    m = m+1
+    print(i)
+    content = readPDF(os.path.join(pdf_dir, i))     
+    name = str(m) # The documnet Name
     pathContent = os.path.join(txt_dir, name)
     saveTxt(content, txtFile = pathContent)
     print(content)
+        
+
