@@ -4,11 +4,19 @@ import os
 import pandas as pd
 from collections import Counter
 
-jieba.set_dictionary('dict.txt.big')
 
-df = pd.read_csv("C:\\Users\\Stella\\Documents\\GitHub\\HW2_Text_Mining\\text.csv")
+
+
+
+work_dir = os.getcwd()
+read_data_dir = os.path.join(work_dir, 'read_data')
+
+df = pd.read_csv(os.path.join(read_data_dir, 'text.csv'))
+# read jeiba dictionary
+jieba.set_dictionary(os.path.join(read_data_dir,'dict.txt.big'))
+
 stopwords = []
-with open('C:\\Users\\Stella\\Documents\\GitHub\\HW2_Text_Mining\\stopwords.txt', 'r', encoding='UTF-8') as file:
+with open(os.path.join(read_data_dir, 'stopwords.txt'), 'r', encoding='UTF-8') as file:
     for each in file.readlines():
         stopwords.append(each.strip())
     stopwords.append(' ')
