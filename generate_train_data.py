@@ -57,6 +57,7 @@ for i in range(len(df)):
     data[i]['cutted_dict'] = lcut_to_dict(current_cutted)
     print(data[i]['cutted_dict'])
 
+# compile all the words
 belly = []
 for m in range(len(data)):
     lb = data[m]['cutted_dict']
@@ -70,16 +71,12 @@ for k in range(len(belly)):
         
         
     
-
+# delete repetative words
 smallbelly = list(set(bigbelly))
 
-# 開啟檔案
+# save the data
 fp = open(os.path.join(os.getcwd(), 'smallbelly5.txt'), "a")
- 
-# 寫入 This is a testing! 到檔案
 fp.write(str(smallbelly))
- 
-# 關閉檔案
 fp.close()
 
 
