@@ -38,9 +38,12 @@ Testing
  
   Visualization  
  -------------- 
-  * Co-oocurence matrix:    
-
+  * Co-oocurence matrix:       
+    ![matrix](https://github.com/A2Zntu/HW2_Text_Mining/blob/master/picture/matrix1.JPG)
+  * Co-oocurence matrix percentage:     
+    ![matrix](https://github.com/A2Zntu/HW2_Text_Mining/blob/master/picture/matrix2.JPG)
  
+    The size of matrix is 610 X 610. 
  
   * Co-oocurence Plot:              
     
