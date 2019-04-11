@@ -31,3 +31,4 @@ Install
 
 ## generate_train_data.py
 * 製作NER所需使用的train_data：由於助教的NER model只能辨識人、地、組織等詞彙，所以我們希望可以新增自訂類別，標記出跟基金市場較相關的術語，我們稱此類別為MKT(Market)。該檔案可以讀進文本、拆分每一個字、並且標記每一個字，如股(B-MKT)、價(I-MKT)，最後產出NER所需的train_data。
+ ![image](https://github.com/A2Zntu/HW2_Text_Mining/blob/Jieba_test/picture/train_data_mkt.JPG)
